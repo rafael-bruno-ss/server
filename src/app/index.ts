@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+import * as http from 'http';
+import app from './app';
+import db from './db/db';
+import { normalizePort, onError, onListening } from './utils/utils';
+
+const server = http.createServer(app);
+const port = normalizePort(process.env.port || 3000);
+const host = process.env.host || '127.0.0.1';
+
+db.mongoose.connection.on('connected', async () => {
+  server.listen({
+    port: port,
+    hostname: host
+  });
+  server.on('error', onError(server));
+  server.on('listening', onListening(server, db));
+});

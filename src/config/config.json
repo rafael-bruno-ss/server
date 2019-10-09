@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "server-dev",
+    "password": "server-dev",
+    "database": "server-dev",
+    "host": "127.0.0.1",
+    "port": 27017
+  },
+  "test": {
+    "username": "server-test",
+    "password": "server-test",
+    "database": "server-test",
+    "host": "127.0.0.1",
+    "port": 27017
+  },
+  "production": {
+    "username": "server",
+    "password": "server",
+    "database": "server",
+    "host": "127.0.0.1",
+    "port": 27017
+  },
+  "pipelines": {
+    "username": "server-pipelines",
+    "password": "server-pipelines",
+    "database": "server-pipelines",
+    "host": "127.0.0.1",
+    "port": 27017
+  }
+}
